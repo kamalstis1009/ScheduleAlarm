@@ -16,19 +16,19 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*
-    Here is a list of UI thread for Android:
-    1. Activity.runOnUiThread(Runnable)
-    2. View.post(Runnable)
-    3. View.postDelayed(Runnable, long)
-    */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         final TextView textView = ((TextView) findViewById(R.id.view_text));
+
+        /*
+        Here is a list of UI thread for Android:
+        1. Activity.runOnUiThread(Runnable)
+        2. View.post(Runnable)
+        3. View.postDelayed(Runnable, long)
+        */
 
         new Handler().postDelayed(new Runnable() {
             @Override
